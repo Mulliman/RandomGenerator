@@ -31,7 +31,7 @@ if(fileUrl){
     //fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(fileUrl)}`)
     fetch(fileUrl)
         .then(response => {
-            if (response.ok) return response.json();
+            if (response.ok) return response.text();
             throw new Error('Network response was not ok.')
         })
         .then(function (json) {
