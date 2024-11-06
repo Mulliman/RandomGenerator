@@ -28,7 +28,8 @@ var fileUrl = getParameterByName("url");
 var quotes = [];
 
 if(fileUrl){
-    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(fileUrl)}`)
+    //fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(fileUrl)}`)
+    fetch(fileUrl)
         .then(response => {
             if (response.ok) return response.json();
             throw new Error('Network response was not ok.')
